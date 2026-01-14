@@ -84,7 +84,7 @@
       header {
         display: flex;
         gap: 3rem;
-        align-items:  flex-start;
+        align-items: flex-start;
         padding-bottom: 3rem;
         border-bottom:  1px solid var(--line-color);
         margin-bottom: 4rem;
@@ -98,26 +98,26 @@
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        object-fit:  cover;
+        object-fit: cover;
         border: 2px solid var(--border-color);
       }
 
-      . profile-picture-placeholder {
+      .profile-picture-placeholder {
         width: 150px;
         height: 150px;
         border-radius: 50%;
         background-color: var(--section-bg);
         border: 2px solid var(--border-color);
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items:  center;
+        justify-content:  center;
         font-size: 3rem;
         color: var(--text-light);
         font-weight: 300;
       }
 
       .header-content {
-        flex: 1;
+        flex:  1;
         text-align: left;
       }
 
@@ -133,11 +133,11 @@
         font-size:  1.1rem;
         color: var(--secondary-color);
         margin-bottom: 2rem;
-        font-weight: 300;
+        font-weight:  300;
       }
 
       . contact-info {
-        display: flex;
+        display:  flex;
         flex-direction: column;
         gap: 0.8rem;
         margin-top: 2rem;
@@ -226,8 +226,8 @@
         border-left: none;
       }
 
-      . education-content {
-        display:  flex;
+      .education-content {
+        display: flex;
         justify-content: space-between;
         align-items: flex-start;
       }
@@ -251,11 +251,16 @@
       }
 
       /* Skills Section */
-      . skill-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 3rem;
-        margin-top:  0;
+      .skill-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2. 5rem;
+        margin-top: 0;
+      }
+
+      .skill-category {
+        display: flex;
+        flex-direction: column;
       }
 
       .skill-category h3 {
@@ -266,11 +271,14 @@
       }
 
       .skill-category ul {
-        list-style: none;
+        list-style:  none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
       }
 
-      .skill-category li {
-        padding: 0.4rem 0;
+      . skill-category li {
+        padding: 0.2rem 0;
         padding-left: 0;
         position: relative;
         color: var(--text-color);
@@ -284,7 +292,7 @@
 
       /* Contact Section */
       #contact {
-        background-color: transparent;
+        background-color:  transparent;
         padding: 0;
         border-radius: 0;
         border:  none;
@@ -292,8 +300,8 @@
 
       #contact p {
         margin-bottom: 1rem;
-        font-size: 0.95rem;
-        font-weight:  300;
+        font-size:  0.95rem;
+        font-weight: 300;
       }
 
       #contact strong {
@@ -339,13 +347,13 @@
           padding: 0 1rem;
         }
 
-        .contact-info {
+        . contact-info {
           flex-direction: column;
           gap: 0.8rem;
           align-items: center;
         }
 
-        .experience .job,
+        .experience . job,
         .education-content {
           flex-direction:  column;
         }
@@ -356,7 +364,6 @@
         }
 
         .skill-grid {
-          grid-template-columns: 1fr;
           gap: 2rem;
         }
 
@@ -417,7 +424,9 @@
     <div class="container">
       <header id="about">
         <div class="profile-picture">
-          <img src="https://assets-starmagic.abs-cbn.com/wp-content/uploads/2022/03/22023343/DJ2-1-rotated_edited.jpg" alt="Dave Cayabyab Profile Picture">
+          <!-- Replace the placeholder below with an actual image -->
+          <!-- <img src="your-photo. jpg" alt="Dave Cayabyab Profile Picture"> -->
+          <div class="profile-picture-placeholder">DC</div>
         </div>
         <div class="header-content">
           <h1>Dave Cayabyab</h1>
@@ -426,17 +435,17 @@
             <span>davericoc@gmail.com</span>
             <span>+63 995 785 7491</span>
             <span>Baguio City, Philippines</span>
-            <span>linkedin. com/in/dybdev</span>
+            <span>linkedin.com/in/dybdev</span>
             <span>daveportfolio.com</span>
           </div>
         </div>
       </header>
       <!--About Me-->
       <section class="about">
-        <h2 id="about">About Me</h2>
+        <h2>About Me</h2>
         <p>
           Motivated 2nd year IT student at University of the Cordilleras,
-          majoring in Web Technology.  Passionate about software development and
+          majoring in Web Technology. Passionate about software development and
           eager to apply classroom knowledge to real-world projects.  Quick
           learner with strong foundation in programming fundamentals and growing
           expertise in web technologies.  Seeking opportunities to gain practical
@@ -522,4 +531,3 @@
     </div>
   </body>
 </html>
-
