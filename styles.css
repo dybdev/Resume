@@ -7,7 +7,7 @@
 
 : root {
   --primary-color: #000000;
-  --secondary-color: #666666;
+  --secondary-color:  #666666;
   --accent-color: #0066cc;
   --text-color: #333333;
   --text-light: #888888;
@@ -42,91 +42,7 @@ nav ul {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2.5rem;
-  max-left: 1rem;
-  font-weight: 300;
-}
-
-/* Education Section */
-#education {
-  background-color: transparent;
-  padding: 0;
-  border-radius: 0;
-  border-left: none;
-}
-
-. education-content {
-  display:  flex;
-  justify-content:  space-between;
-  align-items: flex-start;
-}
-
-.education-header {
-  flex: 1;
-}
-
-.degree {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--primary-color);
-  margin-bottom: 0.3rem;
-}
-
-.school {
-  color: var(--secondary-color);
-  font-size: 0.95rem;
-  font-style:  normal;
-  font-weight:  300;
-}
-
-/* Skills Section */
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 3rem;
-  margin-top: 0;
-}
-
-.skill-category h3 {
-  font-size: 0.9rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-
-.skill-category ul {
-  list-style: none;
-}
-
-.skill-category li {
-  padding: 0.4rem 0;
-  padding-left: 0;
-  position: relative;
-  color: var(--text-color);
-  font-size: 0.9rem;
-  font-weight:  300;
-}
-
-.skill-category li::before {
-  content: "";
-}
-
-/* Contact Section */
-#contact {
-  background-color: transparent;
-  padding: 0;
-  border-radius: 0;
-  border: none;
-}
-
-#contact p {
-  margin-bottom:  1rem;
-  font-size: 0.95rem;
-  font-weight: 300;
-}
-
-#contact strong {
-  color:  var(--text-light);
-  display: inline-width: 900px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -161,7 +77,7 @@ nav a:hover {
 header {
   text-align: left;
   padding-bottom: 3rem;
-  border-bottom: 1px solid var(--line-color);
+  border-bottom:  1px solid var(--line-color);
   margin-bottom: 4rem;
 }
 
@@ -174,29 +90,173 @@ header h1 {
 }
 
 header p {
-  font-size: 1.1rem;
+  font-size: 1. 1rem;
   color: var(--secondary-color);
   margin-bottom: 2rem;
-  font-weight:  300;
+  font-weight: 300;
 }
 
 . contact-info {
   display:  flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .contact-info span {
-  color: var(--text-color);
-  font-size: 0.95rem;
-  font-weight:  300;
-  line-height: 1.4;
+  color: var(--text-light);
+  font-size: 0.85rem;
 }
 
-. contact-info span:: before {
+.contact-info span:: before {
   content: "";
-}-block;
+}
+
+/* Sections */
+section {
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-weight:  600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+section h2:: before {
+  content: "";
+}
+
+section h2:: after {
+  content: "";
+}
+
+/* About Section */
+.about p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+/* Experience Section */
+.experience .job {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  margin-bottom: 2rem;
+  border-left: none;
+}
+
+.job-header {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.company {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.date {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  margin-left: 1rem;
+  font-weight: 300;
+}
+
+/* Education Section */
+#education {
+  background-color:  transparent;
+  padding: 0;
+  border-radius: 0;
+  border-left: none;
+}
+
+. education-content {
+  display:  flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.education-header {
+  flex:  1;
+}
+
+.degree {
+  font-size: 1. 1rem;
+  font-weight: 500;
+  color:  var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.school {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* Skills Section */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  margin-top:  0;
+}
+
+.skill-category h3 {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.skill-category ul {
+  list-style: none;
+}
+
+.skill-category li {
+  padding: 0.4rem 0;
+  padding-left: 0;
+  position: relative;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.skill-category li::before {
+  content: "";
+}
+
+/* Contact Section */
+#contact {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  border:  none;
+}
+
+#contact p {
+  margin-bottom: 1rem;
+  font-size:  0.95rem;
+  font-weight: 300;
+}
+
+#contact strong {
+  color: var(--text-light);
+  display: inline-block;
   width: 100px;
   font-weight: 400;
   font-size: 0.85rem;
@@ -204,7 +264,7 @@ header p {
 
 #contact a {
   color: var(--primary-color);
-  text-decoration:  none;
+  text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
@@ -213,13 +273,13 @@ header p {
 }
 
 /* Responsive Design */
-@media (max-width:  768px) {
+@media (max-width: 768px) {
   .container {
     padding: 3rem 1.5rem;
   }
 
   header h1 {
-    font-size: 2.5rem;
+    font-size: 2. 5rem;
   }
 
   nav ul {
@@ -227,14 +287,14 @@ header p {
     padding: 0 1rem;
   }
 
-  . contact-info {
-    flex-direction:  column;
-    gap: 0.8rem;
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  . experience .job,
+  .experience .job,
   .education-content {
-    flex-direction: column;
+    flex-direction:  column;
   }
 
   . date {
