@@ -14,7 +14,7 @@
 
       : root {
         --primary-color: #000000;
-        --secondary-color: #666666;
+        --secondary-color:  #666666;
         --accent-color: #0066cc;
         --text-color: #333333;
         --text-light: #888888;
@@ -37,8 +37,8 @@
         padding: 1.5rem 0;
         border-bottom: 1px solid var(--border-color);
         position: sticky;
-        top: 0;
-        z-index:  1000;
+        top:  0;
+        z-index: 1000;
         backdrop-filter: blur(10px);
         background-color: rgba(255, 255, 255, 0.95);
       }
@@ -84,7 +84,7 @@
       header {
         display: flex;
         gap: 3rem;
-        align-items: flex-start;
+        align-items:  flex-start;
         padding-bottom: 3rem;
         border-bottom:  1px solid var(--line-color);
         margin-bottom: 4rem;
@@ -97,7 +97,7 @@
       .profile-picture img {
         width: 150px;
         height: 150px;
-        border-radius:  50%;
+        border-radius: 50%;
         object-fit: cover;
         border: 2px solid var(--border-color);
       }
@@ -130,7 +130,7 @@
       }
 
       header p {
-        font-size: 1.1rem;
+        font-size:  1.1rem;
         color: var(--secondary-color);
         margin-bottom: 2rem;
         font-weight:  300;
@@ -179,7 +179,7 @@
       /* About Section */
       .about p {
         font-size: 1rem;
-        line-height: 1.8;
+        line-height:  1.8;
         color: var(--text-color);
         font-weight: 300;
         text-align: left;
@@ -224,11 +224,11 @@
         background-color: transparent;
         padding: 0;
         border-radius: 0;
-        border-left:  none;
+        border-left: none;
       }
 
-      . education-content {
-        display:  flex;
+      .education-content {
+        display: flex;
         justify-content: space-between;
         align-items: flex-start;
         gap: 2rem;
@@ -255,10 +255,10 @@
 
       /* Skills Section */
       . skill-grid {
-        display:  flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin-top: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        margin-top:  0;
       }
 
       .skill-category {
@@ -296,7 +296,7 @@
 
       /* Contact Section */
       #contact {
-        background-color: transparent;
+        background-color:  transparent;
         padding: 0;
         border-radius: 0;
         border:  none;
@@ -305,7 +305,7 @@
       #contact p {
         margin-bottom: 0.8rem;
         font-size:  0.95rem;
-        font-weight: 300;
+        font-weight:  300;
         line-height: 1.6;
       }
 
@@ -356,7 +356,7 @@
           align-items: center;
         }
 
-        .experience .job,
+        .experience . job,
         .education-content {
           flex-direction: column;
         }
@@ -364,6 +364,11 @@
         .date {
           margin-left: 0;
           margin-top: 0.5rem;
+        }
+
+        .skill-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
         }
 
         #contact strong {
@@ -386,7 +391,7 @@
           font-size: 0.8rem;
         }
 
-        . profile-picture img,
+        .profile-picture img,
         .profile-picture-placeholder {
           width: 120px;
           height: 120px;
@@ -423,7 +428,9 @@
     <div class="container">
       <header id="about">
         <div class="profile-picture">
-          <img src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=" alt="Dave Cayabyab Profile Picture">
+          <!-- Replace the placeholder below with an actual image -->
+          <!-- <img src="your-photo. jpg" alt="Dave Cayabyab Profile Picture"> -->
+          <div class="profile-picture-placeholder">DC</div>
         </div>
         <div class="header-content">
           <h1>Dave Cayabyab</h1>
