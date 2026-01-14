@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Professional Resume</title>
+    <title>Resume</title>
   </head>
   <body>
-    <!-- Navigation Menu -->
     <nav>
+      <div class="logo">
+        <h1><a href="#">Dave</a></h1>
+      </div>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -16,136 +18,105 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-
     <div class="container">
-      <!-- Header Section -->
       <header id="about">
-        <h1>Daverico Lloyd Cayabyab</h1>
-        <p class="subtitle">Software Developer</p>
+        <h1>Dave Cayabyab</h1>
+        <p>Web Developer | IT Student</p>
         <div class="contact-info">
-          <span>📧 davericoc@gmail.com</span>
-          <span>📱 +63 995 785 7491</span>
-          <span>📍 Baguio City, Philippines</span>
-          <span>🔗 linkedin.com/in/dybdev</span>
+          <span>davericoc@gmail.com</span>
+          <span>+63 995 785 7491</span>
+          <span>Baguio City, Philippines</span>
+          <span>linkedin.com/in/dybdev</span>
+          <span>daveportfolio.com</span>
         </div>
       </header>
-
-      <!-- Professional Summary -->
-      <section>
-        <h2>Professional Summary</h2>
+      <!--About Me-->
+      <section class="about">
+        <h2 id="about">About Me</h2>
         <p>
-          Motivated 2nd year IT student at University of the Cordilleras, 
-          majoring in Web Technology. Passionate about software development 
-          and eager to apply classroom knowledge to real-world projects. 
-          Quick learner with strong foundation in programming fundamentals 
-          and growing expertise in web technologies. Seeking opportunities 
-          to gain practical experience and contribute to innovative solutions.
+          Motivated 2nd year IT student at University of the Cordilleras,
+          majoring in Web Technology. Passionate about software development and
+          eager to apply classroom knowledge to real-world projects. Quick
+          learner with strong foundation in programming fundamentals and growing
+          expertise in web technologies. Seeking opportunities to gain practical
+          experience and contribute to innovative solutions.
         </p>
       </section>
-
-      <!-- Work Experience -->
-      <section id="experience">
-        <h2>Experience & Projects</h2>
-
+      <!--Experience-->
+      <section class="experience">
+        <h2 id="experience">Experience</h2>
         <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-title">Web Development Project</div>
-              <div class="company">PinesVA</div>
-            </div>
-            <div class="date">Oct 2025 - Nov 2025</div>
+          <div>
+            <div class="job-header">Web Project</div>
+            <div class="company">PinesVA</div>
           </div>
-          <ul class="responsibilities">
-            <li>
-              Developed and maintained website project using React, Next.js, Tailwind CSS, and Supabase
-            </li>
-            <li>Collaborated with a co-developer friend on bug fixes and feature implementations</li>
-            <li>
-              Learning version control best practices using Git and GitHub
-            </li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-title">Academic Projects</div>
-              <div class="company">University of the Cordilleras</div>
-            </div>
-            <div class="date">2023 - Present</div>
-          </div>
-          <ul class="responsibilities">
-            <li>
-              Developed a personal portfolio website showcasing web development skills
-            </li>
-            <li>Helped a graduate student develop a thesis project website</li>
-          </ul>
+          <div class="date">October 2025 - November 2025</div>
         </div>
       </section>
-
-      <!-- Education -->
+      <!--Education-->
       <section id="education">
         <h2>Education</h2>
-
-        <div class="education-item">
+        <div class="education-content">
           <div class="education-header">
             <div>
-              <div class="degree">Bachelor of Science in Information Technology Major in Web Technology</div>
-              <div class="institution">University of the Cordilleras</div>
+              <div class="degree">
+                Bachelor of Science in Information Technology Major in Web
+                Technology
+              </div>
+              <div class="school">University of the Cordilleras</div>
             </div>
-            <div class="date">2023 - 2027</div>
           </div>
-          <p>
-            GPA: 3.8/4.0 | Relevant Coursework: Mobile Development, Cloud Architecture(In Progress), Web Development
-          </p>
+          <div class="date">2023 - 2027</div>
         </div>
       </section>
-
-      <!-- Skills -->
+      <!--Skills-->
       <section id="skills">
-        <h2>Technical Skills</h2>
-
-        <div class="skills-grid">
+        <h2>Tech Stack</h2>
+        <div class="skill-grid">
           <div class="skill-category">
-            <h3>Programming Languages</h3>
             <ul>
-              <li>JavaScript/TypeScript</li>
+              <li>Javascript/Typescript</li>
+              <li>React</li>
+              <li>HTML/CSS</li>
               <li>Python(In Progress)</li>
-              <li>HTML</li>
-              <li>CSS</li>
             </ul>
           </div>
-
           <div class="skill-category">
             <h3>Frameworks & Libraries</h3>
             <ul>
-              <li>React.js</li>
-              <li>Node.js</li>
               <li>Next.js</li>
+              <li>React</li>
+              <li>Three.js</li>
               <li>Tailwind CSS</li>
               <li>Django(In Progress)</li>
             </ul>
           </div>
-
           <div class="skill-category">
-            <h3>Tools & Technologies</h3>
+            <h3>Tools and Technology</h3>
             <ul>
-              <li>Git/GitHub</li>
-              <li>MongoDB/PostgreSQL</li>
+              <li>Git & GitHub</li>
+              <li>Figma</li>
+              <li>VS Code</li>
+              <li>MongoDB</li>
+              <li>Supabase</li>
             </ul>
           </div>
         </div>
       </section>
-
-      <!-- Contact -->
+      <!--Contact-->
       <section id="contact">
         <h2>Contact Information</h2>
         <p><strong>Email:</strong> davericoc@gmail.com</p>
         <p><strong>Phone:</strong> +63 995 785 7491</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/dybdev</p>
-        <p><strong>Portfolio:</strong> www.davericoc.com</p>
+        <p>
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/dybdev">linkedin.com/in/dave</a>
+        </p>
+        <p>
+          <strong>Portfolio:</strong>
+          <a href="https://www.daveportfolio.com">daveportfolio.com</a>
+        </p>
       </section>
     </div>
   </body>
 </html>
-
