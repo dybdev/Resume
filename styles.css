@@ -99,6 +99,7 @@ header p {
 .  contact-info {
   display:  flex;
   flex-direction:  column;
+  align-items: start;
   gap: 0.5rem;
   margin-top: 2rem;
 }
@@ -343,3 +344,4 @@ section h2:: after {
     page-break-inside: avoid;
   }
 }
+
