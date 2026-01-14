@@ -1,10 +1,358 @@
-<!DOCTYPE html>
+<! DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
     <title>Resume</title>
+    <style>
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      : root {
+        --primary-color: #000000;
+        --secondary-color: #666666;
+        --accent-color: #0066cc;
+        --text-color: #333333;
+        --text-light: #888888;
+        --background:  #ffffff;
+        --section-bg: #fafafa;
+        --border-color: #e0e0e0;
+        --line-color: #000000;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background);
+      }
+
+      /* Navigation */
+      nav {
+        background-color: var(--background);
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+        position: sticky;
+        top: 0;
+        z-index:  1000;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.95);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      nav li {
+        display: inline;
+      }
+
+      nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+        transition: color 0.2s ease;
+        text-transform: uppercase;
+      }
+
+      nav a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Container */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: var(--background);
+        padding: 4rem 2rem;
+      }
+
+      /* Header */
+      header {
+        text-align: left;
+        padding-bottom: 3rem;
+        border-bottom:  1px solid var(--line-color);
+        margin-bottom: 4rem;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+
+      header p {
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+        margin-bottom: 2rem;
+        font-weight: 300;
+      }
+
+      . contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 2rem;
+        line-height: 1.8;
+      }
+
+      .contact-info span {
+        color: var(--text-color);
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+
+      .contact-info span:: before {
+        content: "";
+      }
+
+      /* Sections */
+      section {
+        margin-bottom: 4rem;
+      }
+
+      section h2 {
+        font-size: 0.75rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        font-weight:  600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      section h2:: before {
+        content: "";
+      }
+
+      section h2:: after {
+        content: "";
+      }
+
+      /* About Section */
+      . about p {
+        font-size: 1rem;
+        line-height:  1.8;
+        color: var(--text-color);
+        font-weight: 300;
+      }
+
+      /* Experience Section */
+      .experience .job {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0;
+        background-color: transparent;
+        border-radius: 0;
+        margin-bottom: 2rem;
+        border-left: none;
+      }
+
+      .job-header {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--primary-color);
+        margin-bottom: 0.3rem;
+      }
+
+      . company {
+        color: var(--secondary-color);
+        font-size: 0.95rem;
+        font-style: normal;
+        font-weight: 300;
+      }
+
+      .date {
+        color: var(--text-light);
+        font-size: 0.85rem;
+        white-space: nowrap;
+        margin-left: 1rem;
+        font-weight: 300;
+      }
+
+      /* Education Section */
+      #education {
+        background-color:  transparent;
+        padding: 0;
+        border-radius: 0;
+        border-left: none;
+      }
+
+      .education-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .education-header {
+        flex: 1;
+      }
+
+      .degree {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color:  var(--primary-color);
+        margin-bottom: 0.3rem;
+      }
+
+      .school {
+        color: var(--secondary-color);
+        font-size: 0.95rem;
+        font-style:  normal;
+        font-weight:  300;
+      }
+
+      /* Skills Section */
+      .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 3rem;
+        margin-top: 0;
+      }
+
+      .skill-category h3 {
+        font-size: 0.9rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+
+      .skill-category ul {
+        list-style: none;
+      }
+
+      .skill-category li {
+        padding: 0.4rem 0;
+        padding-left:  0;
+        position: relative;
+        color: var(--text-color);
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+
+      .skill-category li::before {
+        content: "";
+      }
+
+      /* Contact Section */
+      #contact {
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+        border: none;
+      }
+
+      #contact p {
+        margin-bottom: 1rem;
+        font-size:  0.95rem;
+        font-weight: 300;
+      }
+
+      #contact strong {
+        color: var(--text-light);
+        display: inline-block;
+        width: 100px;
+        font-weight: 400;
+        font-size: 0.85rem;
+      }
+
+      #contact a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition:  opacity 0.2s ease;
+      }
+
+      #contact a:hover {
+        opacity: 0.6;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          padding: 3rem 1.5rem;
+        }
+
+        header h1 {
+          font-size: 2. 5rem;
+        }
+
+        nav ul {
+          gap: 1.5rem;
+          padding: 0 1rem;
+        }
+
+        .contact-info {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+
+        . experience .job,
+        .education-content {
+          flex-direction:  column;
+        }
+
+        . date {
+          margin-left:  0;
+          margin-top: 0.5rem;
+        }
+
+        .skill-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        #contact strong {
+          width: auto;
+          margin-right: 0.5rem;
+        }
+      }
+
+      @media (max-width:  480px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        section h2 {
+          font-size:  0.7rem;
+        }
+
+        nav a {
+          padding: 0;
+          font-size: 0.8rem;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        nav {
+          display: none;
+        }
+
+        .container {
+          padding: 0;
+          margin: 0;
+        }
+
+        section {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -34,9 +382,9 @@
         <p>
           Motivated 2nd year IT student at University of the Cordilleras,
           majoring in Web Technology. Passionate about software development and
-          eager to apply classroom knowledge to real-world projects. Quick
+          eager to apply classroom knowledge to real-world projects.  Quick
           learner with strong foundation in programming fundamentals and growing
-          expertise in web technologies. Seeking opportunities to gain practical
+          expertise in web technologies.  Seeking opportunities to gain practical
           experience and contribute to innovative solutions.
         </p>
       </section>
@@ -72,6 +420,7 @@
         <h2>Tech Stack</h2>
         <div class="skill-grid">
           <div class="skill-category">
+            <h3>Languages</h3>
             <ul>
               <li>Javascript/Typescript</li>
               <li>React</li>
@@ -118,6 +467,3 @@
     </div>
   </body>
 </html>
-
-
-
