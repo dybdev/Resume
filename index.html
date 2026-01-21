@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="\styles.css" />
     <title>Resume</title>
   </head>
   <body>
+    <div class="cursor-dot"></div>
     <nav>
-      <div class="logo">
-        <h1><a href="#">Dave</a></h1>
-      </div>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -20,14 +19,19 @@
     </nav>
     <div class="container">
       <header id="about">
-        <h1>Dave Cayabyab</h1>
-        <p>Web Developer | IT Student</p>
+        <div class="header-content">
+          <img src="profile.jpg" alt="Dave Cayabyab" class="profile-picture">
+          <div class="header-text">
+            <h1>Dave Cayabyab</h1>
+            <p>Web Developer | IT Student</p>
+          </div>
+        </div>
         <div class="contact-info">
           <span>davericoc@gmail.com</span>
           <span>+63 995 785 7491</span>
           <span>Baguio City, Philippines</span>
           <span>linkedin.com/in/dybdev</span>
-          <span>daveportfolio.com</span>
+          <span>dybdev.com</span>
         </div>
       </header>
       <!--About Me-->
@@ -37,7 +41,7 @@
           Motivated 2nd year IT student at University of the Cordilleras,
           majoring in Web Technology. Passionate about software development and
           eager to apply classroom knowledge to real-world projects. Quick
-          learner with strong foundation in programming fundamentals and growing
+          learner with strong foundation in building websites and growing
           expertise in web technologies. Seeking opportunities to gain practical
           experience and contribute to innovative solutions.
         </p>
@@ -114,9 +118,38 @@
         </p>
         <p>
           <strong>Portfolio:</strong>
-          <a href="https://www.daveportfolio.com">daveportfolio.com</a>
+          <a href="https://www.dybdev.com">dybdev.com</a>
         </p>
       </section>
     </div>
+
+    <script>
+      // Custom cursor
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorOutline = document.querySelector('.cursor-outline');
+
+      window.addEventListener('mousemove', (e) => {
+        cursorDot.style.left = e.clientX + 'px';
+        cursorDot.style.top = e.clientY + 'px';
+        
+        cursorOutline.style.left = e.clientX + 'px';
+        cursorOutline.style.top = e.clientY + 'px';
+      });
+
+      // Add hover effect for interactive elements
+      const hoverElements = document.querySelectorAll('a, button, .profile-picture');
+      
+      hoverElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+          cursorDot.classList.add('hover');
+          cursorOutline.classList.add('hover');
+        });
+        
+        element.addEventListener('mouseleave', () => {
+          cursorDot.classList.remove('hover');
+          cursorOutline.classList.remove('hover');
+        });
+      });
+    </script>
   </body>
 </html>
