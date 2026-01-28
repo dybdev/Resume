@@ -16,16 +16,31 @@
       <span></span>
     </button>
     
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    
     <!-- Navigation Menu -->
     <nav class="nav-menu" id="navMenu">
-      <ul>
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+      <div class="nav-container">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link" data-number="01">HOME</a></li>
+          <li><a href="#about" class="nav-link" data-number="02">ABOUT</a></li>
+          <li><a href="#projects" class="nav-link" data-number="03">WORK</a></li>
+          <li><a href="#education" class="nav-link" data-number="04">EDUCATION</a></li>
+          <li><a href="#skills" class="nav-link" data-number="05">SKILLS</a></li>
+          <li><a href="#contact" class="nav-link" data-number="06">CONTACT</a></li>
+        </ul>
+        <div class="nav-footer">
+          <div class="nav-socials">
+            <a href="https://github.com/dybdev" target="_blank">GITHUB</a>
+            <a href="https://linkedin.com/in/dybdev" target="_blank">LINKEDIN</a>
+            <a href="https://instagram.com/dybntfnd" target="_blank">INSTAGRAM</a>
+          </div>
+          <div class="nav-contact">
+            <a href="mailto:davericoc@gmail.com">DAVERICOC@GMAIL.COM</a>
+          </div>
+        </div>
+      </div>
     </nav>
     <div class="container">
       <!-- Hero Section -->
@@ -225,6 +240,31 @@
             </p>
           </div>
           
+          <div class="contact-form-section">
+            <h4 class="form-title">GET IN TOUCH</h4>
+            <form action="#" method="POST" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">NAME</label>
+                  <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                  <label for="email">EMAIL</label>
+                  <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">SUBJECT</label>
+                <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+              </div>
+              <div class="form-group">
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
+              </div>
+              <button type="submit" class="submit-btn">SEND MESSAGE →</button>
+            </form>
+          </div>
+          
           <div class="contact-methods">
             <div class="contact-method">
               <h4>EMAIL</h4>
@@ -302,15 +342,26 @@
       // Hamburger menu toggle
       const menuToggle = document.getElementById('menuToggle');
       const navMenu = document.getElementById('navMenu');
+      const menuOverlay = document.getElementById('menuOverlay');
       const navLinks = document.querySelectorAll('.nav-link');
 
       menuToggle.addEventListener('click', () => {
         menuToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
         document.body.classList.toggle('menu-open');
         
         // Toggle white cursor when menu is open
         cursorDot.classList.toggle('white');
+      });
+
+      // Close menu when clicking overlay
+      menuOverlay.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        cursorDot.classList.remove('white');
       });
 
       // Close menu when clicking on a link
@@ -318,6 +369,7 @@
         link.addEventListener('click', () => {
           menuToggle.classList.remove('active');
           navMenu.classList.remove('active');
+          menuOverlay.classList.remove('active');
           document.body.classList.remove('menu-open');
           
           // Remove white cursor when menu closes
