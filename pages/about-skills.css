@@ -1,0 +1,254 @@
+/* About Page - Profile and Skills Styling */
+
+/* Profile Section */
+.profile {
+    background-color: #fff;
+    padding: 80px 40px;
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-content h2 {
+    font-family: "Baflion Sans", sans-serif;
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.profile-content p {
+    font-family: "GC Mozarella", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.info-list li strong {
+    font-family: "Baflion Sans", sans-serif;
+    color: #000;
+    min-width: 120px;
+}
+
+.info-list li span {
+    font-family: "GC Mozarella", sans-serif;
+    color: #555;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #1a1a1a;
+    padding: 80px 40px;
+}
+
+.skill-wrapper {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.skill-wrapper h1 {
+    font-family: "Baflion Sans", sans-serif;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.skill-wrapper p {
+    font-family: "GC Mozarella", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Skill Bars Container */
+.skill-bars-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.skill-bar-item {
+    margin-bottom: 35px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.skill-name {
+    font-family: "Baflion Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.skill-percentage {
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.skill-progress {
+    width: 100%;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #fff 0%, #f0f0f0 100%);
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.skill-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        transparent 100%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Animation on scroll */
+.skill-bar-item.animate .skill-progress-fill {
+    width: var(--progress-width);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile {
+        padding: 60px 30px;
+    }
+
+    .profile-content h2 {
+        font-size: 36px;
+    }
+
+    .profile-content p {
+        font-size: 16px;
+    }
+
+    .info-list li {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .info-list li strong {
+        min-width: auto;
+    }
+
+    .skills {
+        padding: 60px 30px;
+    }
+
+    .skill-wrapper h1 {
+        font-size: 36px;
+    }
+
+    .skill-wrapper p {
+        font-size: 16px;
+    }
+
+    .skill-bars-container {
+        padding: 30px 0;
+    }
+
+    .skill-name {
+        font-size: 16px;
+    }
+
+    .skill-percentage {
+        font-size: 14px;
+    }
+
+    .skill-progress {
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile {
+        padding: 40px 20px;
+    }
+
+    .profile-content h2 {
+        font-size: 28px;
+    }
+
+    .profile-content p {
+        font-size: 15px;
+    }
+
+    .info-list li {
+        font-size: 14px;
+    }
+
+    .skills {
+        padding: 40px 20px;
+    }
+
+    .skill-wrapper h1 {
+        font-size: 28px;
+    }
+
+    .skill-wrapper p {
+        font-size: 15px;
+    }
+
+    .skill-bar-item {
+        margin-bottom: 30px;
+    }
+
+    .skill-name {
+        font-size: 15px;
+    }
+
+    .skill-percentage {
+        font-size: 13px;
+    }
+}
