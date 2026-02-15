@@ -4,15 +4,10 @@ const scrollProgress = document.querySelector('.scroll-progress');
 // Page Loader
 window.addEventListener('load', () => {
     const loader = document.querySelector('.page-loader');
-    const body = document.body;
-    
-    // Add loading class initially
-    body.classList.add('loading');
     
     // Hide loader after page loads
     setTimeout(() => {
         loader.classList.add('hidden');
-        body.classList.remove('loading');
     }, 1000);
 });
 
@@ -279,25 +274,12 @@ pageTransitionLinks.forEach(link => {
         const targetUrl = link.getAttribute('href');
         
         // Fade out animation
-        document.body.style.opacity = '1';
         document.body.style.transition = 'opacity 0.5s ease';
-        
-        setTimeout(() => {
-            document.body.style.opacity = '0';
-        }, 10);
+        document.body.style.opacity = '0';
         
         // Navigate to new page after fade
         setTimeout(() => {
             window.location.href = targetUrl;
         }, 500);
     });
-});
-
-// Fade in on page load
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-        document.body.style.transition = 'opacity 0.5s ease';
-    }, 100);
 });
